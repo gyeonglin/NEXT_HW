@@ -1,0 +1,25 @@
+*{font-family: 'Nanum Myeongjo', serif;}
+
+body{
+    text-align: center;
+    background-color: darkturquoise;
+}
+
+header{
+    margin-bottom: 100px;
+}
+
+.food{
+    margin-bottom: 100px;
+}
+
+.music{
+    margin-bottom: 100px;
+}
+
+.personality h1 {
+    font-size: 100px;
+    color: red;
+}
+
+
