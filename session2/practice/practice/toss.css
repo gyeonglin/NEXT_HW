@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.rootwrapper{
+    padding: 30px;
+    display: flex;
+}
+
+.main{
+    color: #454F5D;
+}
+
+.t1{
+    font-size: 52px;
+    margin: 20px 80px 0px 0px;    
+}
+
+.t2{
+    font-size: 17px;
+    margin: 38px 0px 0px;
+}
+
+.t3{
+    font-size: 16px;
+    margin: 20px 0px 0px;
+    color: #3182F6;
+}
+
+.wrapper1{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.wrapper2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.cardbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 360px;
+    height: 70px;
+    margin: 0px 0px 12px;
+    border: 2px #454F5D;
+    background-color: white;
+    font-size: 15px;
+    border-radius: 12px;
+    box-shadow:
+    0 30px 60px 12px rgba(0, 0, 33, 0.05),
+    0 4px 24px 0 rgba(0, 0, 33, 0.05),
+    0 0 1px 0 rgba(0, 0, 33, 0.09) ;
+}
+
+.bank {
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.logo {
+    width: 28px;
+    height: 28px;
+    margin: 15px;
+}
+
+.asset{ 
+    margin: 15px;
+}

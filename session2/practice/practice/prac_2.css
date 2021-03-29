@@ -1,0 +1,35 @@
+.prac_2_img {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+}
+
+.box1 {
+  width: 500px;
+  height: 300px;
+  background: red;
+  position: absolute;
+  opacity: 0.2;
+  left: 230px;
+  z-index: 1;
+}
+
+.box2 {
+  width: 500px;
+  height: 300px;
+  background: green;
+  position: absolute;
+  opacity: 0.2;
+  left: 130px;
+  z-index: 3;
+}
+
+.box3 {
+  width: 500px;
+  height: 300px;
+  background: blue;
+  position: absolute;
+  opacity: 0.2;
+  left: 180px;
+  z-index: 2;
+}

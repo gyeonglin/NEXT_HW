@@ -1,0 +1,17 @@
+.box_wrapper {
+  width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  border: 3px solid lightpink;
+  align-items: center;
+  justify-content : center;
+  display: flex;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: lightpink;
+  margin : 10px;
+}

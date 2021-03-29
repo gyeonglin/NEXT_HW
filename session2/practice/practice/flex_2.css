@@ -1,0 +1,35 @@
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: lightpink;
+  margin: 5px 0px 0px 5px;
+}
+
+.wrapper1 {
+  width: 600px;
+  height: 105px;
+  display: flex;
+  justify-content: baseline;
+}
+
+.wrapper2 {
+  width: 600px;
+  height: 105px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper3 {
+  width: 600px;
+  height: 105px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rootwrapper {
+  width: 600px;
+  height: 325px;
+  display: flex;
+  flex-direction: column;
+}

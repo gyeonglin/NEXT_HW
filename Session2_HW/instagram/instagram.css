@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 26px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: #8E8E8E;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+.material-icons.md-blue { color: #0095F6; }
+.material-icons.md-dark { color: #262626; }
+.material-icons.md-white { color: #FFFFFF; }
+.material-icons.md-26 { font-size: 26px; }
+.material-icons.md-30 { font-size: 30px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
+
+
+p{
+    color: #262626;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 48px;
+}
+
+.staticbar {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 8px;
+    border-bottom: 1px solid rgba(var(--b38,219,219,219),1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: 16px 16px 24px;
+}
+
+.profile_box {
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 77px;
+    min-height: 77px;
+    margin: 0px 30px 0px 0px;
+    border-radius: 70%;
+    overflow: hidden;
+
+}
+
+.profile_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile_id {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 0px 12px;
+}
+
+.profile_button {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #0095F6;
+    margin: 0px 5px 0px 0px;
+}
+
+.profile_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px 16px 21px;
+
+}
+
+.id {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0px;
+    border-top: 1px solid rgba(var(--b38,219,219,219),1);
+}
+
+.info_unit{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+.img_wrapper{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0px 10px;
+}
+
+.img_unit{
+    width: 33%;
+    padding-bottom: 33%;
+    position: relative;
+    overflow: hidden;
+    margin: 2px;
+    border: 1px solid rgba(var(--b38,219,219,219),1);
+
+}
+
+.img_unit img{
+    position: absolute;
+    width: 110%;
+    height: auto;
+    z-index: 1;
+}
+
+.img_wrapper span{
+    z-index: 2;
+    position: absolute;
+    right: 1%;
+    font-size: 180%;
+
+}
