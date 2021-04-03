@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+button {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.sans {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.pad4px {
+    padding: 0px 4px;
+}
+
+@font-face { 
+    font-family: 'Material Icons'; 
+    font-style: normal; 
+    font-weight: 400; 
+    src: url(path/to/MaterialIcons-Regular.eot); /* For IE6-8 */ 
+    src: local('Material Icons'), local('MaterialIcons-Regular'), 
+    url(path/to/MaterialIcons-Regular.woff2) format('woff2'), 
+    url(path/to/MaterialIcons-Regular.woff) format('woff'), 
+    url(path/to/MaterialIcons-Regular.ttf) format('truetype'); 
+}
+
+.material-icons { 
+    font-family: 'Material Icons'; 
+    font-weight: normal; 
+    font-style: normal; 
+    font-size: 24px; /* Preferred icon size */ 
+    color: #606770;
+    display: inline-block; 
+    line-height: 1; 
+    text-transform: none; 
+    letter-spacing: normal; 
+    word-wrap: normal; 
+    white-space: nowrap; 
+    direction: ltr; /* Support for all WebKit browsers. */ 
+    -webkit-font-smoothing: antialiased; /* Support for Safari and Chrome. */ 
+    text-rendering: optimizeLegibility; /* Support for Firefox. */ 
+    -moz-osx-font-smoothing: grayscale; /* Support for IE. */ 
+    font-feature-settings: 'liga'; 
+}
+
+
+.md-dark { color: #1c1e21; }
+.md-grey { color: #65676B; }
+.md-blue { color: #216FDB; }
+.md-blue70 { color: #1877F2}
+.md-lightgrey { color: #F0F2F5;}
+.md-13px { font-size: 13px; }
+.md-15px { font-size: 15px; }
+.md-24px { font-size: 24px; }
+.md-17px { font-size: 17px; }
+.md-18px { font-size: 18px; }
+.md-35px { font-size: 35px; }
+.md-40px { font-size: 40px; }
+
+.material-icons-round {
+    font-family: 'Material Icons Round';
+    }
+
+
+.wrapper {
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 56px;
+    background-color: #F0F2F5;
+}
+
+.staticbar {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(var(--b38,219,219,219),1);
+}
+
+.icon_box {
+    display: flex;
+    padding: 8px 4px;
+}
+
+.top_button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #E4E6EB;
+    border: 0;
+    margin: 0px 4px;
+}
+
+.more_button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: #F0F2F5 solid 2px;
+    position : absolute;
+    right: 12%;
+    z-index: 50;
+}
+
+.box {
+    width: 80%;
+    margin: 16px 0 0;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius:max(0px, min(8px, calc((100vw - 4px - 100%) * 9999))) / 8px;
+    box-shadow:
+    0 7px 15px 3px rgba(0, 0, 33, 0.05),
+    0 1px 6px 0 rgba(0, 0, 33, 0.05),
+    0 0 1px 0 rgba(0, 0, 33, 0.09) ;
+
+}
+
+.post {
+    flex-direction: column;
+    padding: 10px 16px; 
+}
+
+.rooms {
+    padding: 8px;
+    justify-content: space-evenly;
+}
+
+.post_box {
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post_button {
+    min-width: 110px;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border: 0;  
+    padding: 8px;
+}
+
+.profile_box {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin: 0 8px;
+    border:#F0F2F5 solid 1px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.profile_wrapper {
+    display: flex;
+}
+
+.profile_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post_msgbutton{  
+    width: 420px;
+    height: 40px;
+    background-color: #F0F2F5;
+    padding: 8px 12px 10px;
+    border-radius: 20px;
+    border: 0;
+}
+
+.rooms_button{
+    width: 140px;
+    height: 40px;
+    background-color: #FFFFFF;
+    padding: 8px 12px 10px;
+    border-radius: 20px;   
+    border: 3px solid #ECF3FF;
+    justify-content: space-evenly;   
+}
+
+.content_button{
+    background-color: #FFFFFF;
+    border: 0;
+    padding: 0 30px;
+}
+
+.content_info{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
