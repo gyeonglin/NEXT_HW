@@ -13,7 +13,7 @@ def extract_info(movie_img_list, movie_list) :
             actor = text_info[2].text.strip().replace('\t','').replace('\r','').replace('\n','')
         else :
             date = text_info[0].text.split('|')[2].strip()
-            director = text_info[1].text.strip()
+            director = text_info[1].text.strip().replace('\t','').replace('\r','').replace('\n','')
             actor = None
 
         result = {
