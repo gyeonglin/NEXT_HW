@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="post">
+        <div>
+            <h2>To do</h2>
+            <p>{{ post.title }}</p>
+        </div>
+        <div>
+            <h2>detail</h2>
+            <p>{{ post.content }}</p>
+        </div>
+        <div>
+            <h2>deadline</h2>
+            <p>{{ post.deadline }}</p>
+        </div>
+    </div>
+
+    <div class="control">
+        <a class="box" href="{% url 'home' %}">Home</a>
+        <a class="box" href="{% url 'edit' post.pk %}">Edit</a>
+        <a class="box" href="{% url 'delete' post.pk %}">Delete</a>
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input class="box" type="text" name="content" placeholder="댓글을 입력해주세요">
+        <button class="box" type="submit">댓글 쓰기</button>
+    </form>
+
+    {% for comment in post.comments.all %}
+    <li>{{ comment.content }}
+    <a class="box" href="{% url 'delete_comment' post.pk comment.pk %}">삭제</a></li>
+    {% endfor %}
+
+{% endblock %}

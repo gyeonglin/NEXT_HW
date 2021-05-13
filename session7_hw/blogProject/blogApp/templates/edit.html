@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block css %} {% load static %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}"> -->
+{% endblock %}
+
+{% block title %}
+New.
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="title">Todo</label>
+            <input type="text" id="title" name="title" value="{{ post.title }}">
+        </div>
+        <div>
+            <label for="content">detail</label>
+            <textarea name="content" id="content" cols="30" rows="10">{{ post.content }}</textarea>
+        </div>
+        <div>
+            <label for="deadline">deadline</label>
+            <input type="date" id="deadline" name="deadline" value="{{ post.deadline }}">
+        </div>
+        <button type="submit">Edit</button>
+    </form>
+{% endblock %}

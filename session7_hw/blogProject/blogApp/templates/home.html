@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+    <h1>To do list</h1>
+    {% for post in posts %}
+    <ul>
+        <li>
+            <div class="container">
+                <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+                <p id="deadline">{{ post.deadline }}</p>    
+            </div>
+        </li>
+    </ul>
+    {% endfor %}
+    <a style="color:red;" href="{% url 'new' %}">Add</a>
+
+{% endblock %}
