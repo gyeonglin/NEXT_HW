@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Post, Comment
+from django.contrib.auth.models import User
+from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def home(request):
@@ -13,7 +16,8 @@ def detail(request, post_pk):
         content = request.POST['content']
         Comment.objects.create(
             post=post,
-            content=content
+            content=content,
+            author = request.user
         )
         return redirect('detail', post_pk)
     
@@ -24,6 +28,7 @@ def delete_comment(request, post_pk, comment_pk):
     comment.delete()
     return redirect('detail', post_pk)
 
+@login_required(login_url='/registration/login')
 def new(request):
     if request.method == 'POST' :
         #POST 요청일 경우
@@ -31,7 +36,8 @@ def new(request):
             new_post = Post.objects.create(
                 title = request.POST['title'],
                 content = request.POST['content'],
-                deadline = request.POST['deadline']
+                deadline = request.POST['deadline'],
+                author = request.user
             )
             return redirect('detail', post_pk=new_post.pk)
 
@@ -56,3 +62,42 @@ def delete(request, post_pk):
     post.delete()
 
     return redirect('home')
+
+def signup(request):
+    if (request.method == 'POST'):
+        found_user = User.objects.filter(username=request.POST['username'])
+        if (len(found_user) > 0):
+            error = 'username이 이미 존재합니다'
+            return render(request, 'registration/signup.html', {'error':error})
+        new_user = User.objects.create_user(
+            username = request.POST['username'],
+            password = request.POST['password']
+        )
+        auth.login(request, new_user)
+        return redirect('home')
+    return render(request, 'registration/signup.html')
+
+def login(request):
+    if (request.method == 'POST'):
+        found_user = auth.authenticate(
+            username = request.POST['username'],
+            password=request.POST['password']
+        )
+        if (found_user is None):
+            error = '아이디 또는 비밀번호가 틀렸습니다'
+            return render(request, 'registration/login.html', {'error':error})
+        auth.login(request, found_user)
+        return redirect('home')
+    return render(request, 'registration/login.html')
+
+def logout(request):
+    auth.logout(request)
+
+    return redirect('home')
+
+@login_required(login_url='/registration/login')
+def mypage(request):
+    posts = Post.objects.filter(author=request.user)
+    comments = Comment.objects.filter(author=request.user)
+
+    return render(request, 'mypage.html', {'posts':posts, 'comments':comments})

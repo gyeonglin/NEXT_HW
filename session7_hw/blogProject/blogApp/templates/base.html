@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   {% load static %}
+  {% load socialaccount %}
+  {% providers_media_js %}
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +19,18 @@
   <header>
     <nav>
       <ul class="nav_links">
-        <li class="nav_words"><a href="{% url 'home' %}">TODO LIST</a></li>
-        <li class="nav_words"><a href="{% url 'new' %}">ADD</a></li>
+        <div class="wrapper">
+          <li class="nav_words"><a href="{% url 'home' %}">TODO</a></li>
+          <li class="nav_words"><a href="{% url 'new' %}">+</a></li>
+        </div>
+        {% if user.is_authenticated %}
+        <li class="nav_words"><a href="{% url 'mypage' %}">안녕하세요, {{ user.username }}님</a></li>
+        <li class="nav_words"><a href="{% url 'logout' %}">logout</a></li>
+        {% else %}
+        <li class="nav_words"><a href="{% url 'login' %}">LOGIN</a></li>
+        <li class="nav_words"><a href="{% provider_login_url 'kakao' %}">KAKAO LOGIN</a></li>
+        <li class="nav_words"><a href="{% url 'signup' %}">SIGNUP</a></li>
+        {% endif %}
       </ul> 
     </nav>
   </header>

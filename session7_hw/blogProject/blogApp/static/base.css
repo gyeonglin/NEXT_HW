@@ -27,7 +27,6 @@ a {
 }
 li {
     list-style: none;
-    margin: 3px;
 }
 
 .nav_links {
@@ -35,10 +34,16 @@ li {
     padding: 10px;
     background-color: black;
     margin: 0;
+    justify-content: space-around;
     
 }
-.nav_words a {
+
+.wrapper {
+    display: flex;
     margin-right: 20px;
+}
+
+.nav_words a {
     font-weight: 600;
     color:white;
 }
