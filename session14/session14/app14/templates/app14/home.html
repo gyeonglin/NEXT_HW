@@ -1,0 +1,13 @@
+<body>
+    <h1>독후감 블로그</h1>
+    <div>
+        <ul>
+            {% for post in posts %}
+            <li>
+                <a href="{% url 'app14:detail' post.pk %}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <a href="{% url 'app14:new' %}">글 쓰러가기</a>
+</body>

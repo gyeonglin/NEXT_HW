@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ex1.css">
+    <title>Awesome</title>
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <button id="myModalBtn">To Do List</button>
+        <div class="inputBox">
+            <input type="text" id="myInput" placeholder="Title...">
+            <button onclick="newElement()" class="addBtn">Add</button>
+        </div>
+    </div>
+
+    <ul id="myUL">
+        <li>
+            <span>Happy Coding :)</span>
+            <span class="close">&#215;</span>
+        </li>
+    </ul>
+
+    <!-- Trigger/Open The Modal -->
+    <!-- The Modal -->
+    <div id = "myModal" class="modal">
+        <!-- Modal content -->
+        <div class = "modal-content">
+            <span class = "modal-close">&times;</span>
+            <img src="https://item.kakaocdn.net/do/7bc82c52413617e0d1e252f100c4738bf43ad912ad8dd55b04db6a64cddaf76d" style="width:300px">
+            <p>하기 싫어도 해야 해요</p>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+
+</body>
+<script src="ex1.js"></script>
+</html>
